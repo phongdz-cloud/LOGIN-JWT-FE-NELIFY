@@ -10,8 +10,9 @@ import {Observable} from 'rxjs';
 export class AuthService {
   // API LOCAL
   private API_SIGNUP = environment.API_LOCAL + 'signup'; // khái báo APi BE
+  private API_SERVER = environment.API_SERVER + 'signup';
   constructor(private http: HttpClient) { }
   signUp(signUp: SignUpForm): Observable<any>{
-    return this.http.post<any>(this.API_SIGNUP, signUp);
+    return this.http.post<any>(this.API_SERVER, signUp);
   }
 }
