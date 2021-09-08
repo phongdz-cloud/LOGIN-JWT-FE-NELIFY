@@ -51,9 +51,7 @@
                     <button mat-stroked-button color="accent" class="mat-button-toggle-group btn-outline-primary">Register
                         <mat-icon color="accent" matSuffix>how_to_reg</mat-icon>
                     </button>
-                    <mat-error *ngIf="status == 'The username is existed! Please try again!'">The username is existed</mat-error>
-                    <mat-error *ngIf="status == 'The email is existed! Please try again!'">The email is existed</mat-error>
-                    <p *ngIf="status == 'Create user successfully'">Create user successfully</p>
+                    <mat-error >{{status}}</mat-error>
                 </form>
             </mat-card>
         </div>

@@ -13,6 +13,6 @@ export class AuthService {
   private API_SERVER = environment.API_SERVER + 'signup';
   constructor(private http: HttpClient) { }
   signUp(signUp: SignUpForm): Observable<any>{
-    return this.http.post<any>(this.API_SERVER, signUp);
+    return this.http.post<any>(this.API_SIGNUP, signUp);
   }
 }
