@@ -48,9 +48,12 @@
                         <mat-error *ngIf="password.hasError('minlength')">The password must more than 5 character</mat-error>
                         <mat-error *ngIf="password.hasError('maxlength')">The password is max length 10 character</mat-error>
                     </mat-form-field><br>
-                        <button mat-stroked-button color="accent" class="mat-button-toggle-group btn-outline-primary">Register
+                    <button mat-stroked-button color="accent" class="mat-button-toggle-group btn-outline-primary">Register
                         <mat-icon color="accent" matSuffix>how_to_reg</mat-icon>
                     </button>
+                    <mat-error *ngIf="status == 'The username is existed! Please try again!'">The username is existed</mat-error>
+                    <mat-error *ngIf="status == 'The email is existed! Please try again!'">The email is existed</mat-error>
+                    <p *ngIf="status == 'Create user successfully'">Create user successfully</p>
                 </form>
             </mat-card>
         </div>
