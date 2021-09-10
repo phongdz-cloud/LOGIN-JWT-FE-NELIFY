@@ -28,10 +28,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import { LoginComponent } from './form-login/login/login.component';
+import { UserAccountComponent } from './form-login/user-account/user-account.component';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home' } },
   { path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'user-account',component: UserAccountComponent,data: {title: 'User'}},
   {
     path: 'guide/getting-started',
     component: GettingStartedComponent,
@@ -40,7 +44,7 @@ export const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, GettingStartedComponent, RegisterComponent],
+  declarations: [AppComponent, HomeComponent, GettingStartedComponent, RegisterComponent, LoginComponent, UserAccountComponent],
   imports: [
     HttpClientModule,
     BrowserModule,

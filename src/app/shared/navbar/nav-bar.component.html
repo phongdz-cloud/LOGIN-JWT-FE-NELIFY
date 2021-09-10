@@ -1,15 +1,13 @@
 <nav class="docs-navbar-header" aria-label="Top Toolbar">
-  <a mat-button class="docs-button" routerLink="/" aria-label="Angular Material">
-    <img class="docs-angular-logo" src="https://raw.githubusercontent.com/vmudigal/ngx-audio-player/master/src/assets/images/logos/angular/angular-white-transparent.svg"
-      alt="">
-    <span>Audio Player</span>
-  </a>
-  <a mat-button class="docs-button" routerLink="/register" aria-label="Angular Material">
-    <img class="docs-angular-logo" src="https://raw.githubusercontent.com/vmudigal/ngx-audio-player/master/src/assets/images/logos/angular/angular-white-transparent.svg"
-         alt="">
+  <a *ngIf="!isLogin" mat-button class="docs-button" routerLink="/register" aria-label="Angular Material">
     <span>Register</span>
   </a>
-
+  <a *ngIf="!isLogin" mat-button class="docs-button" routerLink="/login" aria-label="Angular Material">
+    <span>Login</span>
+  </a>
+  <a *ngIf="isLogin" mat-button class="docs-button" routerLink="/register" aria-label="Angular Material">
+    <span>{{name}}</span>
+  </a>
 
   <div class="flex-spacer"></div>
   <app-theme-picker></app-theme-picker>

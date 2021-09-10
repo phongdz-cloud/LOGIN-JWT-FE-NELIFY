@@ -39,7 +39,6 @@ export class RegisterComponent implements OnInit {
       this.form.password
     );
     this.authenService.signUp(this.signUpForm).subscribe(data => {
-      console.log(data);
       if ( JSON.stringify(data) == JSON.stringify(this.error1)){
         this.status = 'The username is existed! Please try again!';
       }
